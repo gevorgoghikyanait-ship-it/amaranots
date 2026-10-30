@@ -1,0 +1,251 @@
+
+.main-footer {
+  width: 100%;
+  overflow: hidden;
+  color: white;
+}
+
+/* Announcement */
+
+.announcement {
+  min-height: 570px;
+  background:
+    linear-gradient(
+      rgba(8, 22, 18, 0.55),
+      rgba(8, 22, 18, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1448375240586-882707db888b")
+    center / cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 9%;
+}
+
+.announcement-box {
+  width: 100%;
+  min-height: 347px;
+  padding: 70px 5%;
+  background: rgba(40, 48, 45, 0.88);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 16px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+}
+
+.announcement-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4%;
+}
+
+.announcement-title span {
+  flex: 1;
+  height: 1px;
+  background: white;
+}
+
+.announcement-title h2 {
+  font-size: 35px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.announcement-box p {
+  margin: 35px 0 24px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.announcement-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 12px;
+}
+
+.announcement-form input {
+  width: 100%;
+  height: 48px;
+  padding: 0 15px;
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 9px;
+  background: transparent;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+.announcement-form input::placeholder {
+  color: #c1c5c3;
+}
+
+.announcement-form input:focus {
+  border-color: #ff963c;
+}
+
+.announcement-form button {
+  height: 48px;
+  padding: 0 25px;
+  border: none;
+  border-radius: 30px;
+  background: #ff963c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.announcement-form button:hover {
+  background: #e87d24;
+}
+
+/* Contact section */
+
+.contact-section {
+  position: relative;
+  min-height: 480px;
+  padding: 45px 5% 130px;
+  background: #101522;
+  text-align: center;
+  overflow: hidden;
+}
+
+.contact-section h2 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 45px;
+}
+
+.contact-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 45px;
+}
+
+.contact-items a,
+.contact-items > span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.contact-items a span,
+.contact-items > span span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.contact-items a:hover {
+  color: #ff963c;
+}
+
+.privacy-link {
+  display: inline-block;
+  margin-top: 45px;
+  color: white;
+  font-size: 14px;
+}
+
+.company-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.company-name span {
+  opacity: 0.7;
+}
+
+/* Mountains */
+
+.mountains {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.mountains svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .announcement-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .announcement-title h2 {
+    font-size: 26px;
+  }
+
+  .contact-items {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .announcement {
+    padding: 35px 15px;
+    min-height: 550px;
+  }
+
+  .announcement-box {
+    padding: 40px 20px;
+  }
+
+  .announcement-title h2 {
+    font-size: 19px;
+    white-space: normal;
+  }
+
+  .announcement-box p {
+    line-height: 1.7;
+  }
+
+  .announcement-form {
+    grid-template-columns: 1fr;
+  }
+
+  .announcement-form button {
+    width: 100%;
+  }
+
+  .contact-section {
+    padding: 40px 15px 120px;
+  }
+
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  .contact-items {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .company-name {
+    flex-wrap: wrap;
+    font-size: 12px;
+  }
+
+  .mountains {
+    height: 90px;
+  }
+}
